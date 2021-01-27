@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <!-- CSS -->
+    <link href="css/estilos.css" rel="stylesheet">
+
+    <title>Generala</title>
+  </head>
+  <body id="tablero">
+
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-md-7 py-4">
+                <h4 class="text-white">¿Qué es la Generala?</h4>
+                <p class="text-muted">La generala es un juego de dados. Se juega con cinco dados y un cubilete; el número de jugadores es ilimitado, pero lo ideal es de 3 a 5. El objetivo del juego es lograr la mayor puntuación, de acuerdo a la valoración establecida para cada jugada posible en el juego, llamada categoría.</p>
+              </div>
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h4 class="text-white copyright">Copyright© 2021</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="text-white">GitHub</a></li>
+                  <li><a href="#" class="text-white">Linkedin</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+              <a href="#" class="navbar-brand d-flex align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dice-5" viewBox="0 0 16 16">
+                      <path d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h10zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3z"/>
+                      <path d="M5.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm4-4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                  </svg>
+                  <strong>GENERALA</strong>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+    <div class="container cantidadEstilos">
+        <h3> Seleccione la cantidad de jugadores </h3>
+
+        <div class="cantidadJugadores">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                <label class="form-check-label" for="inlineRadio3">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option4">
+                <label class="form-check-label" for="inlineRadio1">5</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option5">
+                <label class="form-check-label" for="inlineRadio2">6</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option6">
+                <label class="form-check-label" for="inlineRadio3">7</label>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+
+        <h3 class="centrarTitulo">Ingrese el nombre o la inicial de cada jugador</h3>
+       
+         <table class="tablaNombres">
+            <tr>
+                <th class="tablaNombres__cantidad">2</th>
+                <th class="tablaNombres__nombres"></th>
+              </tr>
+              <tr>
+                <td class="tablaNombres__cantidad">3</td>
+                <td class="tablaNombres__nombres"></td>
+              </tr>
+              <tr>
+                <td class="tablaNombres__cantidad">4</td>
+                <td class="tablaNombres__nombres"></td>
+              </tr>
+              <tr>
+                <th class="tablaNombres__cantidad">5</th>
+                <th class="tablaNombres__nombres"></th>
+              </tr>
+              <tr>
+                <td class="tablaNombres__cantidad">6</td>
+                <td  class="tablaNombres__nombres"></td>
+              </tr>
+              <tr>
+                <td class="tablaNombres__cantidad">7</td>
+                <td  class="tablaNombres__nombres"></td>
+              </tr>
+        </table>
+    </div>
+
+
+
+
+
+
+    <!-- <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">ESCALERA</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">FULL</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">POKER</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">GENERALA</th>
+                    <td colspan="2"></td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">GENERALA DOBLE</th>
+                    <td colspan="2"></td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">TOTAL</th>
+                    <td colspan="2"></td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+
+    <!--Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+  </body>
+</html>
