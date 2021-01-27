@@ -113,6 +113,8 @@ let jugadores = () => {
 
 console.log(jugadores());
 
+gsdfa
+
 
 
 function Player(nombre, puntos, puntosTotales){
