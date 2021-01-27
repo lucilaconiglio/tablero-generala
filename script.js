@@ -113,7 +113,7 @@ let jugadores = () => {
 
 console.log(jugadores());
 
-gsdfa
+
 
 
 
