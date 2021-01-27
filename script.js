@@ -1,78 +1,3 @@
-/* function jugadores(){
-    let jugador1 = prompt('Nombre jugador');
-
-    alert(jugador1 + ' comienza el juego');
-   
-}
-
-console.log(jugadores()); 
- */
-
-/* function Player(jugador1, jugador2){
-    this.jugador1 = jugador1;
-    this.jugador2 = jugador2;
-
-    console.log(jugador1)
-    console.log(jugador2)
-}
-
-var nombre1 = prompt('Nombre')
-var nombre2 = prompt('Nombre')
-
-console.log(Player(nombre1, nombre2))
-
-function quienGano() {
-    if
-} */
-
-/* function cantidadJugadores(jugador1, jugador2, jugador3, jugador4, jugador5, jugador6){
-    this.jugador1 = jugador1;
-    this.jugador2 = jugador2;
-    this.jugador3 = jugador3;
-    this.jugador4 = jugador4;
-    this.jugador5 = jugador5;
-    this.jugador6 = jugador6;
-
-
-    var cantidad = parseInt(prompt('Seleccione la cantidad de jugadores')); // minimo 2 jugadores maximo 6
-
-    if (cantidad <2) {
-        console.log('No se puede jugar de a 1');
-    } else if (cantidad === 2) {
-        var jugador1 = prompt('Nombre o inicial del jugador 1');
-        var jugador2 = prompt('Nombre o inicial del jugador 2');
-    } else if (cantidad === 3) {
-        var jugador1 = prompt('Nombre o inicial del jugador 1');
-        var jugador2 = prompt('Nombre o inicial del jugador 2');
-        var jugador3 = prompt('Nombre o inicial del jugador 3');
-    } else if (cantidad === 4) {
-        var jugador1 = prompt('Nombre o inicial del jugador 1');
-        var jugador2 = prompt('Nombre o inicial del jugador 2');
-        var jugador3 = prompt('Nombre o inicial del jugador 3');
-        var jugador4 = prompt('Nombre o inicial del jugador 4');
-    } else if (cantidad === 5) {
-        var jugador1 = prompt('Nombre o inicial del jugador 1');
-        var jugador2 = prompt('Nombre o inicial del jugador 2');
-        var jugador3 = prompt('Nombre o inicial del jugador 3');
-        var jugador4 = prompt('Nombre o inicial del jugador 4');
-        var jugador5 = prompt('Nombre o inicial del jugador 5');
-    } else if (cantidad === 6) {
-        var jugador1 = prompt('Nombre o inicial del jugador 1');
-        var jugador2 = prompt('Nombre o inicial del jugador 2');
-        var jugador3 = prompt('Nombre o inicial del jugador 3');
-        var jugador4 = prompt('Nombre o inicial del jugador 4');
-        var jugador5 = prompt('Nombre o inicial del jugador 5');
-        var jugador6 = prompt('Nombre o inicial del jugador 6');
-    } else {
-        console.log('La cantidad de jugadores maxima es de 6')
-    }
-
-}
-
-console.log(cantidadJugadores(jugador1, jugador2, jugador3, jugador4, jugador5, jugador6)) */
-
-
-
 let jugadores = () => {
 
     let cantidadJugadoresPosibles = [2, 3, 4, 5, 6, 7];
@@ -115,7 +40,7 @@ console.log(jugadores());
 
 
 
-
+// Objeto con nombre del jugador y la cantidad de puntos que hizo en cada seccion del juego
 
 function Player(nombre, puntos, puntosTotales){
     this.nombre = nombre;
