@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> master
 # Logs
 logs
 *.log
@@ -102,3 +106,9 @@ dist
 
 # TernJS port file
 .tern-port
+<<<<<<< HEAD
+=======
+=======
+/node_modules
+>>>>>>> master
+>>>>>>> master

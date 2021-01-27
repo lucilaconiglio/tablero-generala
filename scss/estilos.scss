@@ -1,0 +1,125 @@
+#index{
+    background-image: url(fondo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#tablero{
+    background-image: url(fondo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.copyright{
+    font-size: smaller;
+    font-weight: lighter;
+}
+
+.MainEstilos{
+    margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.texto{
+    color: darkgreen;
+}
+
+
+
+/* tablero */
+
+.cantidadEstilos{
+     background-color: rgba(239, 243, 242, 0.5);
+
+    h3{
+        font-size: 50px;
+        text-align: center;
+        color: black;
+       
+    }
+}
+.cantidadJugadores{
+
+    margin-left: 250px;
+    margin-right: 250px;
+    
+
+    div{
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 0;
+    color: black;
+    }
+}
+
+.centrarTitulo{
+    margin: 50px;
+    text-align: center;
+    color:#2b580c;
+}
+
+
+
+.tablaNombres{
+    width: 50%;
+    color: black;
+    margin: 50px -100px 50px 250px;
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    .tablaNombres__cantidad{
+        background-color: #2b580c;
+        width: 10px;
+    }
+
+    .tablaNombres__nombres{
+        width: 500%;
+        background-color: #2b580c;
+    }
+}
+
+@media only screen and (max-width:768px)
+{
+    .cantidadEstilos{
+    
+
+        h3{
+            font-size: 25px;
+            text-align: center;
+        }
+    }
+    .cantidadJugadores{
+    
+        margin-left: 1px;
+        display: flex;
+        flex-direction: row;
+    
+        div{
+        font-size: 22px;
+        margin-left: 5px;
+        }
+    }
+
+    .tablaNombres{
+        width: 50%;
+        margin: 20px;
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    
+        .tablaNombres__cantidad{
+            width: 10px;
+        }
+    }
+
+    .tablaNombres__nombres{
+        width: 100%;
+    }
+        
+}
