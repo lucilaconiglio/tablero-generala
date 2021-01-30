@@ -1,14 +1,15 @@
 let cantidadJugadores = parseInt(prompt('Cantidad de 2 a 7 jugadores'));
+// Por ahora pido la cantidad por prompt, pero la idea es que se seleccione con
+// los radio buttons
 
 let jugadores = () => {
-
-    
 
     function Player(jugador){
         this.jugador = jugador;
     } 
 
-    let jugador = []
+    let jugador = [] // El nombre se ingresara por el formulario de nombres que se encunetra en mi HTML (tablero.html),
+                     // con eventos, y el nombre ingresado se reproducira en el tablero anotador
     
     if (cantidadJugadores === 2) {
 
@@ -70,11 +71,9 @@ let jugadores = () => {
 console.log(jugadores());
 
 
-
-
 // Dependiendo de la cantidad de jugadores seleccionados ( de 2 a 7) 
 // se pone de color gris los campos que no van a poder ser completados.
-// Por ahora la cantidad se ingresa por promt hasta que vea eventos
+// Por ahora la cantidad se ingresa por prompt hasta que vea eventos
 
 if (cantidadJugadores == 2) {
 
