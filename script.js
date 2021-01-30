@@ -8,8 +8,10 @@ let jugadores = () => {
         this.jugador = jugador;
     } 
 
-    let jugador = [] // El nombre se ingresara por el formulario de nombres que se encunetra en mi HTML (tablero.html),
-                     // con eventos, y el nombre ingresado se reproducira en el tablero anotador
+    let jugador = [] // El nombre se ingresara por el formulario de nombres que se encuntra en mi HTML (tablero.html),
+                     // con eventos, y el nombre ingresado se reproducira en el tablero anotador que de acuerdo a la 
+                     // cantidad de jugadores se agregara la columna (o eso tengo pensado por ahora, vi que con 
+                     // jQuery se puede hacer =D)
     
     if (cantidadJugadores === 2) {
 
@@ -71,9 +73,10 @@ let jugadores = () => {
 console.log(jugadores());
 
 
-// Dependiendo de la cantidad de jugadores seleccionados ( de 2 a 7) 
+// Dependiendo de la cantidad de jugadores seleccionados (de 2 a 7) 
 // se pone de color gris los campos que no van a poder ser completados.
-// Por ahora la cantidad se ingresa por prompt hasta que vea eventos
+// Por ahora la cantidad se ingresa por prompt hasta que veamos eventos.
+// ver en tablero.html
 
 if (cantidadJugadores == 2) {
 
@@ -114,6 +117,7 @@ if (cantidadJugadores == 2) {
     nombresJugadores[6].style.backgroundColor = "#556052";
 
 } 
+
 
 
 // Objeto con nombre del jugador y la cantidad de puntos que hizo en cada seccion del juego
