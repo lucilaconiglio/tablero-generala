@@ -1,12 +1,10 @@
 #index {
-  background-image: url(fondo.jpg);
-  background-attachment: fixed;
-  background-size: cover; }
+  background-image: url(otroFondo.jpg);
+  background-attachment: fixed; }
 
 #tablero {
-  background-image: url(fondo.jpg);
-  background-attachment: fixed;
-  background-size: cover; }
+  background-image: url(otroFondo.jpg);
+  background-attachment: fixed; }
 
 .copyright {
   font-size: smaller;
@@ -24,6 +22,7 @@
   background-color: rgba(239, 243, 242, 0.5); }
   .cantidadEstilos h3 {
     font-size: 50px;
+    font-weight: bolder;
     text-align: center;
     color: black; }
 
@@ -38,6 +37,7 @@
 
 .centrarTitulo {
   font-size: 2.5rem;
+  font-weight: bolder;
   margin: 50px;
   text-align: center;
   color: #2b580c; }
@@ -49,7 +49,6 @@
 
 .nombres {
   background-color: #2b580c;
-  color: black;
   font-family: 'PT Serif', serif;
   font-size: 1.8rem;
   box-shadow: 0 0 3px #EDBB99 inset;
@@ -59,6 +58,9 @@
   height: 48px;
   border: 1px solid #ccc;
   box-sizing: border-box; }
+
+.nombres::placeholder {
+  color: #556052; }
 
 .submit {
   cursor: pointer;

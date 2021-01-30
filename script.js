@@ -71,6 +71,11 @@ console.log(jugadores());
 
 
 
+
+// Dependiendo de la cantidad de jugadores seleccionados ( de 2 a 7) 
+// se pone de color gris los campos que no van a poder ser completados.
+// Por ahora la cantidad se ingresa por promt hasta que vea eventos
+
 if (cantidadJugadores == 2) {
 
     var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
@@ -150,32 +155,7 @@ let jugador = prompt('Ingrese el nombre del jugador')
 let nombre = new Player(jugador);
 
 console.log(nombre);
-  */
+
+*/
 
 
-/* 
-var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
-
-console.log(nombresJugadores)
-
-function jugadores() {
-
-    if (eleccion === [2]) {
-        nombresJugadores[5].style.backgroundColor = "black";
-        nombresJugadores[4].style.backgroundColor = "black";
-        nombresJugadores[3].style.backgroundColor = "black";
-        nombresJugadores[2].style.backgroundColor = "black";
-    } else if (eleccion === 3) {
-        nombresJugadores[5].style.backgroundColor = "black";
-        nombresJugadores[4].style.backgroundColor = "black";
-        nombresJugadores[3].style.backgroundColor = "black";
-    } else if (eleccion === 4) {
-        nombresJugadores[5].style.backgroundColor = "black";
-        nombresJugadores[4].style.backgroundColor = "black";
-    } else if (eleccion === 5) {
-        nombresJugadores[5].style.backgroundColor = "black";
-    } else if (eleccion === 6) {
-        nombresJugadores[3].style.backgroundColor = "black";
-
-    }
-} */
