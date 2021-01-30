@@ -57,30 +57,49 @@
     text-align: center;
     color:#2b580c;
 }
+ 
+// Tabla donde se ingresan los nombres 
 
-
-
-.tablaNombres{
-    width: 50%;
-    color: black;
-    margin: 50px -100px 50px 250px;
-
-    td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
-
-    .tablaNombres__cantidad{
-        background-color: #2b580c;
-        width: 10px;
-    }
-
-    .tablaNombres__nombres{
-        width: 500%;
-        background-color: #2b580c;
-    }
+.centrarTitulo{
+    font-size: 2.5rem;
+    margin: 50px;
+    text-align: center;
+    color:#2b580c;
 }
+
+.nombreJugadores {
+    width: 500px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.input {
+    background-color: #2b580c;
+    color: black;
+    font-family: 'PT Serif', serif;
+    font-size: 1.8rem;
+    box-shadow: 0 0 3px #EDBB99 inset;
+    margin-bottom: 16px;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    height: 48px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+.submit {
+    cursor: pointer;
+    height: 48px;
+    padding: 0 20px;
+    border: none;
+    font-family: 'Oranienbaum', sans-serif;
+    font-size: 1.8rem;
+    color: #fff;
+    background-color: #ee8057;
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+  }
 
 @media only screen and (max-width:768px)
 {
@@ -104,22 +123,12 @@
         }
     }
 
-    .tablaNombres{
-        width: 50%;
-        margin: 20px;
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-    
-        .tablaNombres__cantidad{
-            width: 10px;
-        }
+    .centrarTitulo{
+        font-size: 30px;
+    }
+    .nombreJugadores{
+        width: 300px;
+        padding: 10px;
     }
 
-    .tablaNombres__nombres{
-        width: 100%;
-    }
-        
 }
