@@ -69,6 +69,8 @@ console.log(jugadores());
 
 
 
+
+
 // Objeto con nombre del jugador y la cantidad de puntos que hizo en cada seccion del juego
 
 /*

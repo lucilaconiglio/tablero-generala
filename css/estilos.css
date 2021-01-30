@@ -37,11 +37,6 @@
     color: black; }
 
 .centrarTitulo {
-  margin: 50px;
-  text-align: center;
-  color: #2b580c; }
-
-.centrarTitulo {
   font-size: 2.5rem;
   margin: 50px;
   text-align: center;
@@ -52,7 +47,7 @@
   margin: 0 auto;
   padding: 24px; }
 
-.input {
+.nombres {
   background-color: #2b580c;
   color: black;
   font-family: 'PT Serif', serif;
