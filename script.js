@@ -1,6 +1,8 @@
+let cantidadJugadores = parseInt(prompt('Cantidad de 2 a 7 jugadores'));
+
 let jugadores = () => {
 
-    let cantidadJugadores = parseInt(prompt('Cantidad de 2 a 7 jugadores'));
+    
 
     function Player(jugador){
         this.jugador = jugador;
@@ -50,7 +52,7 @@ let jugadores = () => {
         jugador.push(new Player('Jugador 6'));
         console.log(jugador);
 
-    } else /*cantidad de jugadores 7*/ {
+    } else /*cantidad de jugadores 7 */{
 
 
         jugador.push(new Player('Jugador 1'));
@@ -69,12 +71,51 @@ console.log(jugadores());
 
 
 
+if (cantidadJugadores == 2) {
+
+    var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
+    
+    nombresJugadores[6].style.backgroundColor = "#556052";
+    nombresJugadores[5].style.backgroundColor = "#556052";
+    nombresJugadores[4].style.backgroundColor = "#556052";
+    nombresJugadores[3].style.backgroundColor = "#556052";
+    nombresJugadores[2].style.backgroundColor = "#556052";
+
+} else if (cantidadJugadores == 3) {
+    var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
+
+    nombresJugadores[6].style.backgroundColor = "#556052";
+    nombresJugadores[5].style.backgroundColor = "#556052";
+    nombresJugadores[4].style.backgroundColor = "#556052";
+    nombresJugadores[3].style.backgroundColor = "#556052";
+  
+
+} else if (cantidadJugadores == 4) {
+    var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
+
+    nombresJugadores[6].style.backgroundColor = "#556052";
+    nombresJugadores[5].style.backgroundColor = "#556052";
+    nombresJugadores[4].style.backgroundColor = "#556052";
+
+} else if (cantidadJugadores == 5) {
+    var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
+    
+    nombresJugadores[6].style.backgroundColor = "#556052";
+    nombresJugadores[5].style.backgroundColor = "#556052";
+
+} else if (cantidadJugadores == 6) {
+
+    var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
+
+    nombresJugadores[6].style.backgroundColor = "#556052";
+
+} 
 
 
 // Objeto con nombre del jugador y la cantidad de puntos que hizo en cada seccion del juego
 
-/*
-function Player(nombre, puntos, puntosTotales){
+
+/* function Player(nombre, puntos, puntosTotales){
     this.nombre = nombre;
     this.puntos =  {
 
@@ -109,8 +150,32 @@ let jugador = prompt('Ingrese el nombre del jugador')
 let nombre = new Player(jugador);
 
 console.log(nombre);
- */
+  */
 
 
+/* 
+var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
 
- 
+console.log(nombresJugadores)
+
+function jugadores() {
+
+    if (eleccion === [2]) {
+        nombresJugadores[5].style.backgroundColor = "black";
+        nombresJugadores[4].style.backgroundColor = "black";
+        nombresJugadores[3].style.backgroundColor = "black";
+        nombresJugadores[2].style.backgroundColor = "black";
+    } else if (eleccion === 3) {
+        nombresJugadores[5].style.backgroundColor = "black";
+        nombresJugadores[4].style.backgroundColor = "black";
+        nombresJugadores[3].style.backgroundColor = "black";
+    } else if (eleccion === 4) {
+        nombresJugadores[5].style.backgroundColor = "black";
+        nombresJugadores[4].style.backgroundColor = "black";
+    } else if (eleccion === 5) {
+        nombresJugadores[5].style.backgroundColor = "black";
+    } else if (eleccion === 6) {
+        nombresJugadores[3].style.backgroundColor = "black";
+
+    }
+} */

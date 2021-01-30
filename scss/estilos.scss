@@ -38,7 +38,7 @@
        
     }
 }
-.cantidadJugadores{
+#cantidadJugadores{
 
     margin-left: 250px;
     margin-right: 250px;
@@ -62,7 +62,7 @@
     color:#2b580c;
 }
 
-.nombreJugadores {
+#nombreJugadores {
     width: 500px;
     margin: 0 auto;
     padding: 24px;
@@ -106,7 +106,7 @@
             text-align: center;
         }
     }
-    .cantidadJugadores{
+    #cantidadJugadores{
     
         margin-left: 1px;
         display: flex;
@@ -121,7 +121,7 @@
     .centrarTitulo{
         font-size: 30px;
     }
-    .nombreJugadores{
+    #nombreJugadores{
         width: 300px;
         padding: 10px;
     }
