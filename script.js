@@ -110,7 +110,7 @@ if (cantidadJugadores == 2) {
     nombresJugadores[6].style.backgroundColor = "#556052";
     nombresJugadores[5].style.backgroundColor = "#556052";
 
-} else (cantidadJugadores == 6) {
+} else if (cantidadJugadores == 6) {
 
     var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
 
