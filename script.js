@@ -5,18 +5,30 @@
 const cantidadJugadores = document.getElementsByClassName('cantidad');
 const nombresJugadores = document.getElementsByClassName('nombres');
 
+console.log(cantidadJugadores)
 
-cantidadJugadores.addEventListener("change", () => {
 
-    for (let i = 0; i <= cantidadJugadores.value; i++) {
-        nombresJugadores[i].style.backgroundColor = "#2b580c";
-        nombresJugadores[i].disabled = false;
+for (let button of cantidadJugadores) {
+    console.log(button);
+    console.log(button.value);
+
+    button.addEventListener('change', ()=>{
+      //  console.log(button + !cambie)
+
+        for (let input of nombresJugadores){
         
+        console.log(input)
+        console.log(input.id)
+    
+        for (let i = 0; i <= button.value; i++) {
+            nombresJugadores[i].style.backgroundColor = "#2b580c";
+            nombresJugadores[i].disabled = false;
+        }
     }
+    })
+}
 
-}) 
 
-console.log(cantidadJugadores())
 
 
 let jugador = []
