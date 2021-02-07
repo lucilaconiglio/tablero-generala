@@ -1,122 +1,43 @@
-let cantidadJugadores = parseInt(prompt('Cantidad de 2 a 7 jugadores'));
+// let cantidadJugadores = parseInt(prompt('Cantidad de 2 a 7 jugadores'));
 // Por ahora pido la cantidad por prompt, pero la idea es que se seleccione con
 // los radio buttons
 
-let jugadores = () => {
-
-    function Player(jugador){
-        this.jugador = jugador;
-    } 
-
-    let jugador = [] // El nombre se ingresara por el formulario de nombres que se encuntra en mi HTML (tablero.html),
-                     // con eventos, y el nombre ingresado se reproducira en el tablero anotador que de acuerdo a la 
-                     // cantidad de jugadores se agregara la columna (o eso tengo pensado por ahora, vi que con 
-                     // jQuery se puede hacer =D)
-    
-    if (cantidadJugadores === 2) {
+const cantidadJugadores = document.getElementsByClassName('cantidad');
+const nombresJugadores = document.getElementsByClassName('nombres');
 
 
-        jugador.push(new Player('Jugador 1'));
-        jugador.push(new Player('Jugador 2'));
-        console.log(jugador);
+cantidadJugadores.addEventListener("change", () => {
 
-       
-    } else if (cantidadJugadores === 3) {
-
-        jugador.push(new Player('Jugador 1'));
-        jugador.push(new Player('Jugador 2'));
-        jugador.push(new Player('Jugador 3'));
-        console.log(jugador);
-
-    } else if (cantidadJugadores === 4) {
-
-        jugador.push(new Player('Jugador 1'));
-        jugador.push(new Player('Jugador 2'));
-        jugador.push(new Player('Jugador 3'));
-        jugador.push(new Player('Jugador 4'));
-        console.log(jugador);
-
-    } else if (cantidadJugadores === 5) {
-
-        jugador.push(new Player('Jugador 1'));
-        jugador.push(new Player('Jugador 2'));
-        jugador.push(new Player('Jugador 3'));
-        jugador.push(new Player('Jugador 4'));
-        jugador.push(new Player('Jugador 5'));
-        console.log(jugador);
-
-    } else if (cantidadJugadores === 6) {
-
-        jugador.push(new Player('Jugador 1'));
-        jugador.push(new Player('Jugador 2'));
-        jugador.push(new Player('Jugador 3'));
-        jugador.push(new Player('Jugador 4'));
-        jugador.push(new Player('Jugador 5'));
-        jugador.push(new Player('Jugador 6'));
-        console.log(jugador);
-
-    } else /*cantidad de jugadores 7 */{
-
-
-        jugador.push(new Player('Jugador 1'));
-        jugador.push(new Player('Jugador 2'));
-        jugador.push(new Player('Jugador 3'));
-        jugador.push(new Player('Jugador 4'));
-        jugador.push(new Player('Jugador 5'));
-        jugador.push(new Player('Jugador 6'));
-        jugador.push(new Player('Jugador 7'));
-        console.log(jugador);
+    for (let i = 0; i <= cantidadJugadores.value; i++) {
+        nombresJugadores[i].style.backgroundColor = "#2b580c";
+        nombresJugadores[i].disabled = false;
+        
     }
 
+}) 
+
+console.log(cantidadJugadores())
+
+
+let jugador = []
+
+function Player(nombre) {
+    this.nombre = nombre;
 }
 
-console.log(jugadores());
 
+for (let i = 1; i <= cantidadJugadores; i++) {
 
-// Dependiendo de la cantidad de jugadores seleccionados (de 2 a 7) 
-// se pone de color gris los campos que no van a poder ser completados.
-// Por ahora la cantidad se ingresa por prompt hasta que veamos eventos.
-// ver en tablero.html
-
-if (cantidadJugadores == 2) {
-
-    var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
-    
-    nombresJugadores[6].style.backgroundColor = "#556052";
-    nombresJugadores[5].style.backgroundColor = "#556052";
-    nombresJugadores[4].style.backgroundColor = "#556052";
-    nombresJugadores[3].style.backgroundColor = "#556052";
-    nombresJugadores[2].style.backgroundColor = "#556052";
-
-} else if (cantidadJugadores == 3) {
-    var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
-
-    nombresJugadores[6].style.backgroundColor = "#556052";
-    nombresJugadores[5].style.backgroundColor = "#556052";
-    nombresJugadores[4].style.backgroundColor = "#556052";
-    nombresJugadores[3].style.backgroundColor = "#556052";
-  
-
-} else if (cantidadJugadores == 4) {
-    var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
-
-    nombresJugadores[6].style.backgroundColor = "#556052";
-    nombresJugadores[5].style.backgroundColor = "#556052";
-    nombresJugadores[4].style.backgroundColor = "#556052";
-
-} else if (cantidadJugadores == 5) {
-    var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
-    
-    nombresJugadores[6].style.backgroundColor = "#556052";
-    nombresJugadores[5].style.backgroundColor = "#556052";
-
-} else if (cantidadJugadores == 6) {
-
-    var nombresJugadores = document.getElementById('nombreJugadores').getElementsByClassName('nombres');
-
-    nombresJugadores[6].style.backgroundColor = "#556052";
+    jugador.push(new Player('Jugador ' + i));
 
 } 
+
+console.log(jugador);
+
+
+
+
+
 
 
 
