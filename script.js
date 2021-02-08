@@ -1,50 +1,51 @@
-// let cantidadJugadores = parseInt(prompt('Cantidad de 2 a 7 jugadores'));
-// Por ahora pido la cantidad por prompt, pero la idea es que se seleccione con
-// los radio buttons
-
 const cantidadJugadores = document.getElementsByClassName('cantidad');
 const nombresJugadores = document.getElementsByClassName('nombres');
 
 console.log(cantidadJugadores)
 
-
 for (let button of cantidadJugadores) {
-    console.log(button);
-    console.log(button.value);
+   // console.log(button);
+   // console.log(button.value);
 
     button.addEventListener('change', ()=>{
       //  console.log(button + !cambie)
 
         for (let input of nombresJugadores){
         
-        console.log(input)
-        console.log(input.id)
+        //console.log(input)
+        //console.log(input.id)
     
         for (let i = 0; i <= button.value; i++) {
             nombresJugadores[i].style.backgroundColor = "#2b580c";
             nombresJugadores[i].disabled = false;
-        }
+        } 
     }
     })
-}
-
-
-
+} 
+    
 
 let jugador = []
+console.log(jugador);
 
 function Player(nombre) {
     this.nombre = nombre;
 }
 
+for (let button of cantidadJugadores) {
+    console.log(button);
+    console.log(button.value);
 
-for (let i = 1; i <= cantidadJugadores; i++) {
+    button.addEventListener('click', ()=> {
+        //  console.log(button + !cambie)
+  
+        for (let i = 0; i <= button.value; i++) {
+        
+            jugador.push(new Player('Jugador ' + (i+1)));
+        
+        }
+    })
+}
 
-    jugador.push(new Player('Jugador ' + i));
-
-} 
-
-console.log(jugador);
 
 
 
