@@ -1,29 +1,19 @@
 const cantidadJugadores = document.getElementsByClassName('cantidad');
 const nombresJugadores = document.getElementsByClassName('nombres');
 
-console.log(cantidadJugadores)
+// console.log(cantidadJugadores)
 
 for (let button of cantidadJugadores) {
-   // console.log(button);
-   // console.log(button.value);
 
     button.addEventListener('change', ()=>{
-      //  console.log(button + !cambie)
-
-        for (let input of nombresJugadores){
-        
-        //console.log(input)
-        //console.log(input.id)
     
         for (let i = 0; i <= button.value; i++) {
             nombresJugadores[i].style.backgroundColor = "#2b580c";
             nombresJugadores[i].disabled = false;
         } 
-    }
     })
 } 
     
-
 let jugador = []
 console.log(jugador);
 
@@ -32,27 +22,15 @@ function Player(nombre) {
 }
 
 for (let button of cantidadJugadores) {
-    console.log(button);
-    console.log(button.value);
 
     button.addEventListener('click', ()=> {
-        //  console.log(button + !cambie)
   
         for (let i = 0; i <= button.value; i++) {
-        
+            
             jugador.push(new Player('Jugador ' + (i+1)));
-        
         }
     })
 }
-
-
-
-
-
-
-
-
 
 // Objeto con nombre del jugador y la cantidad de puntos que hizo en cada seccion del juego
 
