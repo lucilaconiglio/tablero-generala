@@ -1,18 +1,37 @@
 const cantidadJugadores = document.getElementsByClassName('cantidad');
 const nombresJugadores = document.getElementsByClassName('nombres');
 
-// console.log(cantidadJugadores)
+console.log(habilitarBotones())
 
-for (let button of cantidadJugadores) {
+function habilitarBotones() {
 
-    button.addEventListener('change', ()=>{
     
-        for (let i = 0; i <= button.value; i++) {
-            nombresJugadores[i].style.backgroundColor = "#2b580c";
-            nombresJugadores[i].disabled = false;
-        } 
-    })
-} 
+    for (let button of cantidadJugadores) {
+        
+        button.addEventListener('change', ()=>{
+
+            deshabilitarBotones()
+            
+            for (let i = 0; i <= button.value; i++) {
+                nombresJugadores[i].style.backgroundColor = "#2b580c";
+                nombresJugadores[i].disabled = false;
+            } 
+        })
+    } 
+
+}
+
+
+function deshabilitarBotones(){
+
+    for (let input of nombresJugadores) {
+        input.style.backgroundColor = "#556052";
+        input.disabled = true;
+   }
+
+}
+
+
     
 let jugador = []
 console.log(jugador);
@@ -72,5 +91,3 @@ let nombre = new Player(jugador);
 console.log(nombre);
 
 */
-
-
