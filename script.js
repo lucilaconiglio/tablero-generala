@@ -1,15 +1,14 @@
 const cantidadJugadores = document.getElementsByClassName('cantidad');
 const nombresJugadores = document.getElementsByClassName('nombres');
 
-console.log(habilitarBotones())
+habilitarBotones()
 
 function habilitarBotones() {
-
     
     for (let button of cantidadJugadores) {
         
         button.addEventListener('change', ()=>{
-
+            
             deshabilitarBotones()
             
             for (let i = 0; i <= button.value; i++) {
@@ -18,21 +17,19 @@ function habilitarBotones() {
             } 
         })
     } 
-
+    
 }
 
-
 function deshabilitarBotones(){
-
+    
     for (let input of nombresJugadores) {
         input.style.backgroundColor = "#556052";
         input.disabled = true;
-   }
-
+    }
+    
 }
 
-
-    
+const botonAjugar = document.getElementById('aJugar');
 let jugador = []
 console.log(jugador);
 
@@ -40,16 +37,23 @@ function Player(nombre) {
     this.nombre = nombre;
 }
 
-for (let button of cantidadJugadores) {
+// todavia estoy intentando hacer funcionar esto 
 
-    button.addEventListener('click', ()=> {
+for (let input of nombresJugadores) {
+
+    botonAjugar.addEventListener('click', ()=> {
   
-        for (let i = 0; i <= button.value; i++) {
+        for (let i = 0; i <= input.value; i++) {
             
             jugador.push(new Player('Jugador ' + (i+1)));
+            console.log(jugador);
         }
-    })
+        
+    }) 
 }
+
+
+
 
 // Objeto con nombre del jugador y la cantidad de puntos que hizo en cada seccion del juego
 
