@@ -29,6 +29,9 @@ function deshabilitarBotones(){
     
 }
 
+
+// intentando pushear a mi array la cantidad de jugadores despues de clickear el boton ¡A jugar!
+
 const botonAjugar = document.getElementById('aJugar');
 let jugador = []
 console.log(jugador);
@@ -37,16 +40,13 @@ function Player(nombre) {
     this.nombre = nombre;
 }
 
-// todavia estoy intentando hacer funcionar esto 
-
-for (let input of nombresJugadores) {
+for (let inputNombre of nombresJugadores) {
 
     botonAjugar.addEventListener('click', ()=> {
   
-        for (let i = 0; i <= input.value; i++) {
+        for (let i = 0; i <= inputNombre.id; i++) {
             
             jugador.push(new Player('Jugador ' + (i+1)));
-            console.log(jugador);
         }
         
     }) 
