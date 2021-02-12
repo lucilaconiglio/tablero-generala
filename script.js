@@ -29,28 +29,26 @@ function deshabilitarBotones(){
     
 }
 
-
-// intentando pushear a mi array la cantidad de jugadores despues de clickear el boton ¡A jugar!
-
 const botonAjugar = document.getElementById('aJugar');
 let jugador = []
-console.log(jugador);
 
 function Player(nombre) {
     this.nombre = nombre;
 }
 
-for (let inputNombre of nombresJugadores) {
-
-    botonAjugar.addEventListener('click', ()=> {
-  
-        for (let i = 0; i <= inputNombre.id; i++) {
-            
-            jugador.push(new Player('Jugador ' + (i+1)));
-        }
+botonAjugar.addEventListener('click', ()=> {
+    
+    for (let inputNombre of nombresJugadores) {
         
-    }) 
-}
+        if (inputNombre.value != '') {
+            
+            jugador.push(new Player(inputNombre.value));
+        }
+    }
+    console.log(jugador)
+}) 
+
+
 
 
 
