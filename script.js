@@ -25,6 +25,7 @@ function deshabilitarBotones(){
     for (let input of nombresJugadores) {
         input.style.backgroundColor = "#556052";
         input.disabled = true;
+        input.value=""; 
     }
     
 }
@@ -41,17 +42,12 @@ botonAjugar.addEventListener('click', ()=> {
     for (let inputNombre of nombresJugadores) {
         
         if (inputNombre.value != '') {
-            
-            jugador.push(new Player(inputNombre.value));
+
+            jugador.push(new Player(inputNombre.value.toUpperCase()));
         }
     }
     console.log(jugador)
 }) 
-
-
-
-
-
 
 // Objeto con nombre del jugador y la cantidad de puntos que hizo en cada seccion del juego
 
