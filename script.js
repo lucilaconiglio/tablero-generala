@@ -39,6 +39,8 @@ function Player(nombre) {
 
 botonAjugar.addEventListener('click', ()=> {
     
+    vaciarArray()
+
     for (let inputNombre of nombresJugadores) {
         
         if (inputNombre.value != '') {
@@ -48,6 +50,10 @@ botonAjugar.addEventListener('click', ()=> {
     }
     console.log(jugador)
 }) 
+
+function vaciarArray(){
+    jugador.length = 0;
+}
 
 // Objeto con nombre del jugador y la cantidad de puntos que hizo en cada seccion del juego
 
