@@ -188,6 +188,10 @@ function agregarColumnas() {
                 </select>
             </td>`);
 
+            $(".total").append(`<td>       
+ 
+            </td>`);
+
         };
     }
 }
