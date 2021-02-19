@@ -71,6 +71,7 @@ function agregarColumnas() {
         if (valor.value != '') {    
 
             $("tr:first").append(`<td><p>${valor.value.toUpperCase()}</p></td>`);
+
             $(".1").append(`<td>       
                 <select id="1">
                     <option value="0"></option>
@@ -195,6 +196,8 @@ function agregarColumnas() {
         };
     }
 }
+
+// function sumaTOTAL(){}
 
 // function vaciarColumnas(){}
 
