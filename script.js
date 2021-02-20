@@ -60,8 +60,20 @@ function vaciarArray(){
 // EN PROCESO //
 
 $("#aJugar").click(function () {
+    ocultarInputs()
+    mostrar()
     agregarColumnas();
 })
+
+function mostrar() {
+    let tablero = document.getElementById('tablero_');
+    tablero.style.display = '';
+}
+
+function ocultarInputs(){
+    let ocultar = document.getElementById('ocultar');
+    ocultar.style.display = 'none';
+}
 
 function agregarColumnas() {
 
@@ -217,13 +229,6 @@ function sumarTOTAL() {
 
     }
 }
-
-
-
-
-// function vaciarColumnas(){}
-
-
 
 
 // Objeto con nombre del jugador y la cantidad de puntos que hizo en cada seccion del juego
