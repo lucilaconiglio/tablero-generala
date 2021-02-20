@@ -55,9 +55,7 @@ function vaciarArray(){
     jugadores.length = 0;
 }
 
-
-
-// EN PROCESO //
+// TABLERO 
 
 $("#aJugar").click(function () {
     ocultarInputs()
