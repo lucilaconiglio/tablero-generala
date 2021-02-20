@@ -31,7 +31,7 @@ function deshabilitarBotones(){
 }
 
 const botonAjugar = document.getElementById('aJugar');
-let jugador = []
+let jugadores = []
 
 function Player(nombre) {
     this.nombre = nombre;
@@ -45,14 +45,14 @@ botonAjugar.addEventListener('click', ()=> {
         
         if (inputNombre.value != '') {
 
-            jugador.push(new Player(inputNombre.value.toUpperCase()));
+            jugadores.push(new Player(inputNombre.value.toUpperCase()));
         }
     }
-    console.log(jugador)
+    console.log(jugadores)
 }) 
 
 function vaciarArray(){
-    jugador.length = 0;
+    jugadores.length = 0;
 }
 
 
@@ -65,14 +65,16 @@ $("#aJugar").click(function () {
 
 function agregarColumnas() {
 
-    for (let valor of nombresJugadores) {
+    for (let jugador of jugadores) {
 
-        if (valor.value != '') {    
+        console.log(jugadores.indexOf(jugador));
 
-            $("tr:first").append(`<td><p>${valor.value.toUpperCase()}</p></td>`);
+        if (jugador.nombre != '') {    
+
+            $("tr:first").append(`<td><p>${jugador.nombre.toUpperCase()}</p></td>`);
 
             $(".1").append(`<td>       
-                <select id="1"class="suma" onchange="sumarTOTAL();">
+                <select id="1" class="${jugadores.indexOf(jugador)}" onchange="sumarTOTAL(${jugadores.indexOf(jugador)});">
                     <option value="0"></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -84,7 +86,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".2").append(`<td>       
-                <select id="2" class="suma" onchange="sumarTOTAL();">
+                <select id="2" class="${jugadores.indexOf(jugador)}" onchange="sumarTOTAL(${jugadores.indexOf(jugador)});">
                     <option value="0"></option>
                     <option value="2">2</option>
                     <option value="4">4</option>
@@ -96,7 +98,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".3").append(`<td>       
-                <select id="3" class="suma" onchange="sumarTOTAL();">
+                <select id="3" class="${jugadores.indexOf(jugador)}" onchange="sumarTOTAL(${jugadores.indexOf(jugador)});;">
                     <option value="0"></option>
                     <option value="3">3</option>
                     <option value="6">6</option>
@@ -108,7 +110,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".4").append(`<td>       
-                <select id="4" class="suma" onchange="sumarTOTAL();">
+                <select id="4" class="${jugadores.indexOf(jugador)}" onchange="sumarTOTAL(${jugadores.indexOf(jugador)});">
                     <option value="0"></option>
                     <option value="4">4</option>
                     <option value="8">8</option>
@@ -120,7 +122,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".5").append(`<td>       
-                <select id="5" class="suma" onchange="sumarTOTAL();">
+                <select id="5" class="${jugadores.indexOf(jugador)}" onchange="sumarTOTAL(${jugadores.indexOf(jugador)});">
                     <option value="0"></option>
                     <option value="5">5</option>
                     <option value="10">10</option>
@@ -132,7 +134,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".6").append(`<td>       
-            <select id="6" class="suma" onchange="sumarTOTAL();">
+            <select id="6" class="${jugadores.indexOf(jugador)}" onchange="sumarTOTAL(${jugadores.indexOf(jugador)});">
                 <option value="0"></option>
                 <option value="6">6</option>
                 <option value="12">12</option>
@@ -144,7 +146,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".esc").append(`<td>       
-                <select id="escalera" class="suma" onchange="sumarTOTAL();">
+                <select id="escalera" class="${jugadores.indexOf(jugador)}" onchange="sumarTOTAL(${jugadores.indexOf(jugador)});">
                     <option value="0"></option>
                     <option value="20">20</option>
                     <option value="25">25</option>
@@ -153,7 +155,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".full").append(`<td>       
-                <select id="full" class="suma" onchange="sumarTOTAL();">
+                <select id="full" class="${jugadores.indexOf(jugador)}" onchange="sumarTOTAL(${jugadores.indexOf(jugador)});">
                     <option value="0"></option>
                     <option value="30">30</option>
                     <option value="35">35</option>
@@ -162,7 +164,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".pok").append(`<td>       
-                <select id="pok" class="suma" onchange="sumarTOTAL();">
+                <select id="pok" class="${jugadores.indexOf(jugador)}" onchange="sumarTOTAL(${jugadores.indexOf(jugador)});">
                     <option value="0"></option>
                     <option value="40">40</option>
                     <option value="45">45</option>
@@ -171,7 +173,7 @@ function agregarColumnas() {
             </td>`);
             
             $(".gen").append(`<td>       
-                <select id="gen" class="suma" onchange="sumarTOTAL();">
+                <select id="gen" class="${jugadores.indexOf(jugador)}" onchange="sumarTOTAL(${jugadores.indexOf(jugador)});">
                     <option value="0"></option>
                     <option value="50">50</option>
                     <option value="55">55</option>
@@ -180,7 +182,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".gen2").append(`<td>       
-                <select id="gen2" class="suma" onchange="sumarTOTAL();">
+                <select id="gen2" class="${jugadores.indexOf(jugador)}" onchange="sumarTOTAL(${jugadores.indexOf(jugador)});">
                     <option value="0"></option>
                     <option value="100">100</option>
                     <option value="105">105</option>
@@ -188,28 +190,30 @@ function agregarColumnas() {
                 </select>
             </td>`);
 
-            $(".total").append(`<td class="puntos">0</td>`);
+            $(".total").append(`<td class="puntos${jugadores.indexOf(jugador)}">0</td>`);
 
         };
     }
 }
 
 function sumarTOTAL() {
-
-    var total = 0;
-    $(".suma").each(function() {
-        if (isNaN(parseInt($(this).val()))) {
-    total += 0;
-        } else {
-    total += parseInt($(this).val());
-    }
-    });
-
-    const puntosTotales = document.getElementsByClassName('puntos');
-
-    for ( let puntos of puntosTotales) {
+    
+    for (let jugador of jugadores) {
         
-       puntos.innerHTML = total;
+        var total = 0;
+        $(`.${jugadores.indexOf(jugador)}`).each(function() {
+            if (isNaN(parseInt($(this).val()))) {
+        total += 0;
+            } else {
+        total += parseInt($(this).val());
+        }
+        });
+    
+        const puntos = document.getElementsByClassName(`puntos${jugadores.indexOf(jugador)}`);
+
+        for (let p of puntos) {
+            p.innerHTML = total;
+        }
 
     }
 }
