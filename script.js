@@ -194,9 +194,6 @@ function agregarColumnas() {
     }
 }
 
-<<<<<<< HEAD
-// function sumaTOTAL(){}
-=======
 function sumarTOTAL() {
 
     var total = 0;
@@ -219,7 +216,6 @@ function sumarTOTAL() {
 
 
 
->>>>>>> tabla
 
 // function vaciarColumnas(){}
 
