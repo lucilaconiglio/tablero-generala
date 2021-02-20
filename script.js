@@ -67,12 +67,12 @@ function agregarColumnas() {
 
     for (let valor of nombresJugadores) {
 
-       
         if (valor.value != '') {    
 
             $("tr:first").append(`<td><p>${valor.value.toUpperCase()}</p></td>`);
+
             $(".1").append(`<td>       
-                <select id="1">
+                <select id="1"class="suma" onchange="sumarTOTAL();">
                     <option value="0"></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -84,7 +84,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".2").append(`<td>       
-                <select id="2">
+                <select id="2" class="suma" onchange="sumarTOTAL();">
                     <option value="0"></option>
                     <option value="2">2</option>
                     <option value="4">4</option>
@@ -96,7 +96,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".3").append(`<td>       
-                <select id="3">
+                <select id="3" class="suma" onchange="sumarTOTAL();">
                     <option value="0"></option>
                     <option value="3">3</option>
                     <option value="6">6</option>
@@ -108,7 +108,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".4").append(`<td>       
-                <select id="4">
+                <select id="4" class="suma" onchange="sumarTOTAL();">
                     <option value="0"></option>
                     <option value="4">4</option>
                     <option value="8">8</option>
@@ -120,7 +120,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".5").append(`<td>       
-                <select id="5">
+                <select id="5" class="suma" onchange="sumarTOTAL();">
                     <option value="0"></option>
                     <option value="5">5</option>
                     <option value="10">10</option>
@@ -132,7 +132,7 @@ function agregarColumnas() {
             </td>`);
 
             $(".6").append(`<td>       
-            <select id="6">
+            <select id="6" class="suma" onchange="sumarTOTAL();">
                 <option value="0"></option>
                 <option value="6">6</option>
                 <option value="12">12</option>
@@ -144,57 +144,78 @@ function agregarColumnas() {
             </td>`);
 
             $(".esc").append(`<td>       
-                <select id="escalera">
+                <select id="escalera" class="suma" onchange="sumarTOTAL();">
                     <option value="0"></option>
-                    <option value="esc">20</option>
-                    <option value="escS">25</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
                     <option value="X">X</option>
                 </select>
             </td>`);
 
             $(".full").append(`<td>       
-                <select id="full">
+                <select id="full" class="suma" onchange="sumarTOTAL();">
                     <option value="0"></option>
-                    <option value="full">30</option>
-                    <option value="fullS">35</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
                     <option value="X">X</option>
                 </select>
             </td>`);
 
             $(".pok").append(`<td>       
-                <select id="pok">
+                <select id="pok" class="suma" onchange="sumarTOTAL();">
                     <option value="0"></option>
-                    <option value="pok">40</option>
-                    <option value="pokS">45</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
                     <option value="X">X</option>
                 </select>
             </td>`);
             
             $(".gen").append(`<td>       
-                <select id="gen">
+                <select id="gen" class="suma" onchange="sumarTOTAL();">
                     <option value="0"></option>
-                    <option value="gen">50</option>
-                    <option value="genS">55</option>
+                    <option value="50">50</option>
+                    <option value="55">55</option>
                     <option value="X">X</option>
                 </select>
             </td>`);
 
             $(".gen2").append(`<td>       
-                <select id="gen2">
+                <select id="gen2" class="suma" onchange="sumarTOTAL();">
                     <option value="0"></option>
-                    <option value="gen2">100</option>
-                    <option value="gen2S">105</option>
+                    <option value="100">100</option>
+                    <option value="105">105</option>
                     <option value="X">X</option>
                 </select>
             </td>`);
 
-            $(".total").append(`<td>       
- 
-            </td>`);
+            $(".total").append(`<td class="puntos">0</td>`);
 
         };
     }
 }
+
+function sumarTOTAL() {
+
+    var total = 0;
+    $(".suma").each(function() {
+        if (isNaN(parseInt($(this).val()))) {
+    total += 0;
+        } else {
+    total += parseInt($(this).val());
+    }
+    });
+
+    const puntosTotales = document.getElementsByClassName('puntos');
+
+    for ( let puntos of puntosTotales) {
+        
+       puntos.innerHTML = total;
+
+    }
+}
+
+
+
 
 // function vaciarColumnas(){}
 
