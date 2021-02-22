@@ -97,28 +97,44 @@
                     <input id="6" type="text" class="nombres" placeholder="Nombre jugador 6" disabled="disabled">
 
                     <!-- Submit nombres -->
-                    <input class="submit" id="aJugar" value="¡A jugar!" href="#tablero_">
+                    <input type="button" class="submit" id="aJugar" value="¡A jugar!" href="#tablero_">
                 </form>
                 
             </div>
         </div>
 
-        <table id="tablero_" style="display:none;">
-            <tr><th></th></tr>
-            <tr class="1"><td>1</td></tr>
-            <tr class="2"><td >2</td></tr>
-            <tr class="3"><td>3</td></tr>
-            <tr class="4"><td>4</td></tr>
-            <tr class="5"><td>5</td></tr>
-            <tr class="6"><td>6</td></tr>
-            <tr class="esc"><td>ESCALERA</td></tr>
-            <tr class="full"><td>FULL</td></tr>
-            <tr class="pok"><td>POKER</td></tr>
-            <tr class="gen"><td>GENERALA</td></tr>
-            <tr class="gen2"><td>D. GENERALA</td></tr>
-            <tr class="total"><td>TOTAL</td></tr>
-        </table>
+        <div id="mostrarTablero"  style="display:none;">
 
+            <div class="container">
+                <button id="mostrarAyuda">Ayuda de memoria</button>
+                <button id="cerrarAyuda">Cerrar</button>
+
+                <hr/>
+                
+                <div class="ayuda"> 
+                    Escalera: 1-2-3-4-5 ó 2-3-4-5-6 <br>
+                    Full: Tres de un mismo número y un par <br>
+                    Poker: Cuatro números iguales y uno distinto <br>
+                    Generala: Cinco dados iguales
+                </div>
+            </div>
+
+            <table id="tablero_">
+                <tr><th></th></tr>
+                <tr class="1"><td>1</td></tr>
+                <tr class="2"><td >2</td></tr>
+                <tr class="3"><td>3</td></tr>
+                <tr class="4"><td>4</td></tr>
+                <tr class="5"><td>5</td></tr>
+                <tr class="6"><td>6</td></tr>
+                <tr class="esc"><td>ESCALERA</td></tr>
+                <tr class="full"><td>FULL</td></tr>
+                <tr class="pok"><td>POKER</td></tr>
+                <tr class="gen"><td>GENERALA</td></tr>
+                <tr class="gen2"><td>D. GENERALA</td></tr>
+                <tr class="total"><td>TOTAL</td></tr>
+            </table>
+        </div>
 
         <!--Separate Popper and Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>

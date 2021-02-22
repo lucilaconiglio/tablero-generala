@@ -64,7 +64,7 @@ $("#aJugar").click(function () {
 })
 
 function mostrar() {
-    let tablero = document.getElementById('tablero_');
+    let tablero = document.getElementById('mostrarTablero');
     tablero.style.display = '';
 }
 
@@ -228,6 +228,16 @@ function sumarTOTAL() {
     }
 }
 
+// ANIMACIONES
+
+$('#mostrarAyuda').click(function(){
+    $('.ayuda').slideDown(200);
+});
+
+$('#cerrarAyuda').click(function(){
+    $('.ayuda').slideUp(200);
+});
+  
 
 // Objeto con nombre del jugador y la cantidad de puntos que hizo en cada seccion del juego
 
