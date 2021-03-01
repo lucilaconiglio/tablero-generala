@@ -237,7 +237,37 @@ $('#mostrarAyuda').click(function(){
 $('#cerrarAyuda').click(function(){
     $('.ayuda').slideUp(200);
 });
-  
+
+// ajax
+
+
+
+/* 
+$('#publicar').click(function(){
+    var twit = require('twit');
+
+    var T = new twit({
+        consumer_key:            FVhzMPUcB2g4U34UCi3chpRG4
+        , consumer_secret:       f6Y1hxKY1QLg2U5TBBm6uZByLeEOfwAGHPbrfnLSjUrcw3gqsL
+        , app_only_auth:        true
+    })
+
+    T.post('statuses/update', tweet, tweeted);
+
+    var tweet = {
+        text: 'hello world!' 
+    }
+    
+    function tweeted(err, data, response) {
+        console.log(data);
+        if (err) {
+            console.log('Algo salio mal');
+        } else {
+            console.log('Funciona')
+        }
+    }
+}); */
+
 
 // Objeto con nombre del jugador y la cantidad de puntos que hizo en cada seccion del juego
 

@@ -36,12 +36,14 @@
     color: black; }
 
 .centrarTitulo {
-  font-size: 2.5rem;
-  margin: 50px;
+  font-size: 2rem;
+  margin: 40px;
+  margin-bottom: 10px;
   text-align: center;
   color: white;
-  background-color: #ee8057;
-  padding: 30px; }
+  background-color: #252525;
+  padding: 30px;
+  border-radius: 15px; }
 
 #nombreJugadores {
   width: 500px;
@@ -71,10 +73,14 @@
   font-family: 'Oranienbaum', sans-serif;
   font-size: 1.8rem;
   color: #fff;
-  background-color: #ee8057;
+  background-color: brown;
   margin: 0 auto;
   display: block;
-  width: 50%; }
+  width: 50%;
+  border-radius: 20px; }
+
+.submit:hover {
+  background-color: #af6b58; }
 
 @media only screen and (max-width: 768px) {
   .cantidadEstilos h3 {
@@ -99,7 +105,10 @@
   color: #fff;
   font-family: 'Lato', Arial, sans-serif;
   margin-top: 30px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
 
 table {
   width: 80%;
@@ -120,21 +129,40 @@ th, td {
   text-align: center; }
 
 select {
-  width: 100%; }
+  width: 100%;
+  background-color: #2b580c;
+  border-style: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
 
 @media only screen and (max-width: 768px) {
   table {
     width: 20%;
-    margin: auto; }
+    margin: 0; }
   table, th, td {
     border: 1px solid #fff;
     border-collapse: collapse; }
   th, td {
-    padding: 20px; } }
+    padding: 30px; }
+  select {
+    align-items: stretch; } }
+
+.botones {
+  align-items: center;
+  padding: 20px 500px 10px 100px; }
 
 .ayuda {
-  width: 100%;
-  height: 100px;
-  background: gold;
+  font-family: Courier, monospace;
+  padding: 4rem 2rem;
+  background: #94ebcd;
   margin: 20px;
   text-align: justify; }
+
+#atras {
+  margin-left: 1000px;
+  margin-bottom: 20px; }
+
+.formulario {
+  background-color: #76a8d1;
+  margin-bottom: 30px; }
