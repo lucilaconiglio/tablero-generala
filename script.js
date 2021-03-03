@@ -246,7 +246,7 @@ function sendMail() {
         message: document.getElementById('msg').value,
     }).then(function(res){console.log('succes', res.status)});
 
-    alert('Tu email fue enviado con exito')
+    alert('Gracias por darnos tu opinion, el mensaje ha sido enviado con éxito')
 }
 
 
