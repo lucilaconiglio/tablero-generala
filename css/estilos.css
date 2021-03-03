@@ -216,3 +216,8 @@ select {
   background-color: #0062cc;
   border: none;
   cursor: pointer; }
+
+@media only screen and (max-width: 768px) {
+  .contact-form .btnContact {
+    margin-top: 5px;
+    margin-bottom: 5px; } }
