@@ -16,6 +16,14 @@
         <!-- jQuery-->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
        
+        <!-- API -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init("user_yY4wdLYW3vj9Eo5D8KIpG");
+            })();
+        </script>
+        
         <title>Generala</title>
   </head>
     <body id="tablero">
@@ -135,27 +143,27 @@
                 <tr class="total"><td>TOTAL</td></tr>
             </table>
 
-            <div id="atras">
-                <button type="button" class="btn btn-link" id="mostrarAyuda"><a href="">Volver atras</a></button>
-            </div>
+<!--             <div id="atras">
+                <button type="button" class="btn btn-link"><a href="">Volver atras</a></button>
+            </div> -->
 
 
-<!--             <div class="container formulario">
+            <div class="container formulario">
                 <form>
                     <div class="form-row">
                         <div class="mb-3">
                             <h3>Contanos que te parecio el tablero y que podriamos mejorar</h3>
-                            <label for="exampleFormControlInput1" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                            <label class="form-label">Tu nombre</label>
+                            <input type="text" class="form-control" id="fromName">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Opina</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label class="form-label">Opina</label>
+                            <input type="text" class="form-control" id="msg" rows="3"></input>
                         </div>
                     </div>
-                    <button type="submit" class="boton btn btn-dark">Enviar</button>
+                    <button type="submit" class="boton btn btn-dark" id="enviar">Enviar</button>
                 </form>
-            </div> -->
+            </div> 
 
 
 
@@ -166,8 +174,6 @@
 
         <!-- JavaScript -->
         <script src="script.js"></script>
-
- 
 
     </body>
 </html>

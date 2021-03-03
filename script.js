@@ -238,10 +238,28 @@ $('#cerrarAyuda').click(function(){
     $('.ayuda').slideUp(200);
 });
 
-// ajax
+// mail
+
+function sendMail() {
+    emailjs.send("gmail","template_gt2khv2",{
+        from_name: document.getElementById('fromName').value,
+        message: document.getElementById('msg').value,
+    }).then(function(res){console.log('succes', res.status)});
+
+    alert('Tu email fue enviado con exito')
+}
 
 
+document.getElementById("enviar").addEventListener("click", function(event){
+    event.preventDefault();
+    sendMail()
+    refreshForm()
+});
 
+function refreshForm(){
+    document.getElementById('fromName').value = '';
+    document.getElementById('msg').value = '';
+}
 
 
 // Objeto con nombre del jugador y la cantidad de puntos que hizo en cada seccion del juego
