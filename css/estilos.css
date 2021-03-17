@@ -168,7 +168,7 @@ select {
     margin-bottom: 30px;
 } */
 .contact-form {
-  background: #fff;
+  background: #213e3b;
   margin-top: 10%;
   margin-bottom: 5%;
   width: 70%; }
@@ -191,7 +191,7 @@ select {
     margin-bottom: 8%;
     margin-top: -10%;
     text-align: center;
-    color: #0062cc; }
+    color: white; }
   .contact-form h4 {
     margin: 10px;
     color: black; }
