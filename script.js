@@ -1,6 +1,10 @@
 const cantidadJugadores = document.getElementsByClassName('cantidad');
 const nombresJugadores = document.getElementsByClassName('nombres');
 
+
+// Eleccion de cantidad de jugadores e ingreso de los nombres de los jugadores
+// Máximo 6 jugadores
+
 habilitarBotones()
 
 function habilitarBotones() {
@@ -55,7 +59,9 @@ function vaciarArray(){
     jugadores.length = 0;
 }
 
-// TABLERO 
+// TABLERO - Por cada jugador, una celda
+// Si son 3 jugadores solo apareceran 3 celdas
+
 
 $("#aJugar").click(function () {
     ocultarInputs()
@@ -238,6 +244,7 @@ $('#cerrarAyuda').click(function(){
     $('.ayuda').slideUp(200);
 });
 
+
 // mail
 
 function sendMail() {
@@ -261,44 +268,3 @@ function refreshForm(){
     document.getElementById('msg').value = '';
 }
 
-
-// Objeto con nombre del jugador y la cantidad de puntos que hizo en cada seccion del juego
-
-
-/* function Player(nombre, puntos, puntosTotales){
-    this.nombre = nombre;
-    this.puntos =  {
-
-        p1: null,
-
-        p2: null,
-        
-        p3: null,
-
-        p4: null,
-
-        p5: null,
-
-        p6: null,
-
-        escalera: null,
-
-        full: null,
-        
-        poker: null,
-
-        generala: null,
-
-        generalaDoble: null,
-
-        }
-
-    this.puntosTotales = null  
-}
-
-let jugador = prompt('Ingrese el nombre del jugador')
-let nombre = new Player(jugador);
-
-console.log(nombre);
-
-*/
